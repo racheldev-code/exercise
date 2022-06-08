@@ -11,5 +11,10 @@ pipeline{
                 sh 'lscpu'
             }
         }
+        stage('3-securityscanner'){
+            steps{
+                sh 'bash /var/lib/jenkins/workspace/exercise-level-ci/security.sh'
+            }
+        }
     }
 }
